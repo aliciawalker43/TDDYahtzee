@@ -93,4 +93,54 @@ public class YahtzeeTest {
 	   
 	 assertEquals(true, actual);
 }
+ 
+ 
+ 
+ @Test
+ void onesTwosThrees1() {
+	 
+	 
+	 
+	 int actual = Yahtzee.onesTwosThrees(2, 2, 2, 2, 2, 2);
+	 
+	assertEquals(10, actual);
+			 
+ }
+ 
+ @Test
+ void onesTwosThrees2() {
+	 
+	 
+	 
+	 int actual = Yahtzee.onesTwosThrees(2, 2, 2, 6, 2, 6);
+	 
+	assertEquals(6, actual);
+			 
+ }
+ 
+ @Test
+ void twoPair() {
+	 
+	 assertEquals(6, Yahtzee.twoPair(1, 1, 2, 2, 3));
+ }
+ 
+ 
+ @Test
+ void twoPairFail() {
+	 
+	 assertEquals(10, Yahtzee.twoPair(1, 2, 3, 4, 3));
+ }
+ 
+ @Test
+ void largeStr8test() {
+	 
+	 assertEquals(20, Yahtzee.largeStraight(2, 3, 4, 5, 6));
+ }
+ 
+ @Test
+ void largeStr8testfail() {
+	 
+	 assertEquals(20, Yahtzee.largeStraight(2, 3, 4, 5, 4));
+ }
+ 
 }
